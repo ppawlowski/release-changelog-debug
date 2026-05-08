@@ -2,6 +2,7 @@ const express = require('express');
 const healthRoutes = require('./routes/health');
 const usersRoutes = require('./routes/users');
 const metricsRoutes = require('./routes/metrics');
+const versionRoutes = require('./routes/version');
 const errorHandler = require('./middleware/errorHandler');
 
 function createApp() {
@@ -12,6 +13,7 @@ function createApp() {
   app.use('/health', healthRoutes);
   app.use('/users', usersRoutes);
   app.use('/metrics', metricsRoutes);
+  app.use('/version', versionRoutes);
 
   app.use(errorHandler);
 
