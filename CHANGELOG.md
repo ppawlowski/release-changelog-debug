@@ -1,3 +1,5 @@
+# CHANGELOG
+
 ### 0.2.0
 
 - Bump version in package.json
