@@ -1,9 +1,9 @@
 const { createApp } = require('./app');
-const { port } = require('./config');
+const { host, port } = require('./config');
 
 const app = createApp();
 
-app.listen(port, () => {
+app.listen(port, host, () => {
   console.log(`Server listening on http://${host}:${port}`);
   console.log(`Environment: ${process.env.NODE_ENV}`);
 });
