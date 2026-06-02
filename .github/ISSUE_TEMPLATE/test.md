@@ -37,7 +37,22 @@ Merge the auto-generated release PRs for the repositories listed below and confi
 - [ ] Ensure https://github.com/flowfuse/usage-ping-collector has been updated, if necessary
 - [ ] Review and merge the open Release PR in each of the repositories below (skip a repo if no Release PR is open — it means nothing has changed since the last release, or someone has already merged the Release PR before the release manager got to it).
 
-Look
+   **nr-launcher dependencies** (once the Release PR is merged, a pull request bumping the dependency version is opened in the `nr-launcher` repository — merge it as well before releasing `nr-launcher` in Phase Two):
+
+   - [ ] `flowfuse/nr-assistant` [🔗](https://github.com/FlowFuse/nr-assistant/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
+   - [ ] `flowfuse/nr-project-nodes` [🔗](https://github.com/FlowFuse/nr-project-nodes/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
+   - [ ] `flowfuse/nr-file-nodes` [🔗](https://github.com/FlowFuse/nr-file-nodes/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
+   - [ ] `flowfuse/nr-mqtt-nodes` [🔗](https://github.com/FlowFuse/nr-mqtt-nodes/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
+   - [ ] `flowfuse/nr-tables-nodes` [🔗](https://github.com/FlowFuse/nr-tables-nodes/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
+   - [ ] `flowfuse/nr-subflow-export` [🔗](https://github.com/FlowFuse/nr-subflow-export/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
+
+   **Standalone packages**:
+
+   - [ ] `flowfuse/nr-tools-plugin` [🔗](https://github.com/FlowFuse/nr-tools-plugin/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
+   - [ ] `flowfuse/nr-mcp-server-nodes` [🔗](https://github.com/FlowFuse/nr-mcp-server-nodes/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
+   - [ ] `flowfuse/mqtt-schema-agent` [🔗](https://github.com/FlowFuse/mqtt-schema-agent/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
+   - [ ] `flowfuse/verdaccio-ff-auth` [🔗](https://github.com/FlowFuse/verdaccio-ff-auth/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
+   - [ ] `flowfuse/device-agent` [🔗](https://github.com/FlowFuse/device-agent/pulls?q=is%3Apr+label%3A%22autorelease%3A+pending%22)
 
 - [ ] Verify that all dependency version bump pull requests opened in the [`flowfuse/nr-launcher`](https://github.com/FlowFuse/nr-launcher/pulls?q=is%3Apr+is%3Aopen+%22chore%3A+bump%22) repository have been merged before `nr-launcher` itself is released in Phase Two.
 - [ ] Verify that the helm/node-red-container Dockerfiles point to the [latest Node-RED releases](https://www.npmjs.com/package/node-red?activeTab=versions) (e.g. 4.1.0)
